@@ -25,9 +25,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-[100vh]`}
       >
-        {children}
+        <div className="h-[100%]  w-[100%]">
+          <div className="app-bar shadow-lg gap-2 p-7 top-0 w-[100%]border-b-orange-800 bg-gray-100 h-[1%] flex items-center justify-between ">
+            <div className="font-[family-name:var(--font-geist-sans)]">
+              <h1>Medium</h1>
+            </div>
+            <ul className="flex justify-center gap-4 font-[family-name:var(--font-geist-sans)] ">
+              <li>Home</li>
+              <li>About</li>
+              <li>Contect</li>
+              <li>Sign In | Sign up</li>
+            </ul>
+
+          </div>
+
+          <div className="h-[100%] w-[100%]">
+            {children}
+          </div>
+
+        </div>
       </body>
     </html>
   );
